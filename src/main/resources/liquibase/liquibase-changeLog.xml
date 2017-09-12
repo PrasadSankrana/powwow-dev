@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+	<!-- The default implementation that we need to make liquibase work -->
+
+	<changeSet author="AdityaDasamantharao" id="powwow_default_tabels_creation">
+
+		<createTable tableName="User">
+			<column name="id" type="int" autoIncrement="true">
+				<constraints primaryKey="true" nullable="false" />
+			</column>
+			<column name="userName" type="varchar(50)">
+				<constraints nullable="false" unique="true" />
+			</column>
+			<column name="emailId" type="varchar(50)">
+				<constraints nullable="false" />
+			</column>
+			<column name="password" type="varchar(50)">
+				<constraints nullable="false" />
+			</column>
+			<column name="createdOn" type="timestamp" valueDate="$now()">
+				<constraints nullable="false" />
+			</column>
+			<column name="active" type="boolean" defaultValueBoolean="true" />
+		</createTable>
+
+		<createTable tableName="UserProfile">
+			<column name="id" type="int" autoIncrement="true">
+				<constraints primaryKey="true" nullable="false" />
+			</column>
+			<column name="userId" type="int">
+				<constraints nullable="false" foreignKeyName="fk_userProfile_User"
+					references="User(id)" />
+			</column>
+			<column name="nicName" type="varchar(50)" />
+			<column name="about" type="varchar(350)" />
+			<column name="age" type="int" />
+			<column name="sex" type="varchar(10)" />
+		</createTable>
+
+		<createTable tableName="Contacts">
+			<column name="id" type="int" autoIncrement="true">
+				<constraints primaryKey="true" nullable="false" />
+			</column>
+			<column name="userId" type="int">
+				<constraints nullable="false" foreignKeyName="fk_userId_Contacts"
+					references="User(id)" />
+			</column>
+			<column name="contactUserId" type="int">
+				<constraints nullable="false" foreignKeyName="fk_contactUserId_Contacts"
+					references="User(id)" />
+			</column>
+			<column name="createdOn" type="timestamp" valueDate="$now()" />
+		</createTable>
+
+		<createTable tableName="ChatRoom">
+			<column name="id" type="int" autoIncrement="true">
+				<constraints primaryKey="true" nullable="false" />
+			</column>
+			<column name="userId" type="int">
+				<constraints nullable="false" foreignKeyName="fk_userId_ChatRoom"
+					references="User(id)" />
+			</column>
+			<column name="message" type="varchar(250)">
+				<constraints nullable="false" />
+			</column>
+			<column name="sendTo" type="int">
+				<constraints nullable="false" foreignKeyName="fk_sendTo_ChatRoom"
+					references="User(id)" />
+			</column>
+			<column name="createdOn" type="timestamp" valueDate="$now()" />
+			<column name="senderVisibility" type="boolean"
+				defaultValueBoolean="true" />
+			<column name="reciverVisibility" type="boolean"
+				defaultValueBoolean="true" />
+			<column name="isRead" type="boolean" defaultValueBoolean="false" />
+		</createTable>
+
+	</changeSet>
+
+</databaseChangeLog>
