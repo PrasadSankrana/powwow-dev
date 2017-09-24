@@ -1,83 +1,79 @@
 package com.powwow.entities;
 
+import java.io.Serializable;
+import javax.persistence.*;
 import java.sql.Timestamp;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-
-@Entity // Tells JPA that it is an entity and match it to back-end table with same class
-		// name
-public class User {
+/**
+ * The persistent class for the user database table.
+ * 
+ */
+@Entity
+public class User implements Serializable {
+	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Integer id;
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private int id;
 
-	private String userName;
+	private byte active;
 
-	private String emailId;
+	private Timestamp created_on;
+
+	private String email_id;
 
 	private String password;
 
-	@Column(name = "createdOn")
-	private Timestamp createdOn;
+	private String user_name;
 
-	private boolean active;
-
-	public Integer getId() {
-		return id;
+	public User() {
 	}
 
-	public void setId(Integer id) {
+	public int getId() {
+		return this.id;
+	}
+
+	public void setId(int id) {
 		this.id = id;
 	}
 
-	public String getUserName() {
-		return userName;
+	public byte getActive() {
+		return this.active;
 	}
 
-	public void setUserName(String userName) {
-		this.userName = userName;
+	public void setActive(byte active) {
+		this.active = active;
+	}
+
+	public Timestamp getCreatedOn() {
+		return this.created_on;
+	}
+
+	public void setCreatedOn(Timestamp createdOn) {
+		this.created_on = createdOn;
 	}
 
 	public String getEmailId() {
-		return emailId;
+		return this.email_id;
 	}
 
 	public void setEmailId(String emailId) {
-		this.emailId = emailId;
+		this.email_id = emailId;
 	}
 
 	public String getPassword() {
-		return password;
+		return this.password;
 	}
 
 	public void setPassword(String password) {
 		this.password = password;
 	}
 
-	public Timestamp getCreatedOn() {
-		return createdOn;
+	public String getUserName() {
+		return this.user_name;
 	}
 
-	public void setCreatedOn(Timestamp createdOn) {
-		this.createdOn = createdOn;
+	public void setUserName(String userName) {
+		this.user_name = userName;
 	}
-
-	public boolean isActive() {
-		return active;
-	}
-
-	public void setActive(boolean active) {
-		this.active = active;
-	}
-	
-	@Override
-	public String toString() {
-		return "User Id:"+id+" | userName:"+userName+"| password:"+password+"| CreatedOn:"+createdOn+"| EmailId:"+emailId+" | IsActive:"+active;
-	}
-
 }
