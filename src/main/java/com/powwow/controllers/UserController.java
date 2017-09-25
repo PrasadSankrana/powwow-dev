@@ -1,36 +1,46 @@
 package com.powwow.controllers;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.powwow.entities.User;
 import com.powwow.repositories.UserRepository;
 
-@Controller // this class is a controller
-@RequestMapping(path = "/user") // Url Mappings
+@RestController
+@RequestMapping(path = "/user") 
 public class UserController {
 
-	@Autowired // this makes spring to get the bean called UserRepository
+	@Autowired 
 	private UserRepository userRepository;
 	
-	@GetMapping(path="/add")	//GET
-	public @ResponseBody String addUser(@RequestParam String userName, @RequestParam String emailId, @RequestParam String password) {
-		//RequestParameters are the form parameters
-		User user=new User();
-		user.setUserName(userName);
-		user.setEmailId(emailId);
-		user.setPassword(password);
-		userRepository.save(user);
-		return "User has been successfully REGISTERED";
+	@RequestMapping(method=RequestMethod.GET)
+	public List<User> getAll(){
+		return (List<User>) userRepository.findAll();
 	}
 	
-	@GetMapping(path="/all")
-	public @ResponseBody Iterable<User> getAllUsers(){
-		return userRepository.findAll();	//returns a JSON of all available users in DB
+	@RequestMapping(method=RequestMethod.POST)
+	public User create(@RequestBody User user) {
+	    return userRepository.save(user);
+	}
+	
+	@RequestMapping(method=RequestMethod.DELETE, value="{id}")
+	public void delete(@PathVariable Long id) {
+		userRepository.delete(id);
+	}
+	
+	@RequestMapping(method=RequestMethod.PUT, value="{id}")
+	public User update(@PathVariable Long id, @RequestBody User user) {
+		User update=userRepository.findOne(id);
+		update.setEmailId(user.getEmailId());
+		update.setUserName(user.getUserName());
+		update.setPassword(user.getPassword());
+		return userRepository.save(update);
 	}
 
 }

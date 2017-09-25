@@ -24,7 +24,7 @@ public class User implements Serializable {
 
 	private String password;
 
-	private String user_name;
+	private String username;
 
 	public User() {
 	}
@@ -70,10 +70,10 @@ public class User implements Serializable {
 	}
 
 	public String getUserName() {
-		return this.user_name;
+		return this.username;
 	}
 
 	public void setUserName(String userName) {
-		this.user_name = userName;
+		this.username = userName;
 	}
 }
