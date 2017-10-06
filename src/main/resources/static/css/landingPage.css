@@ -1,0 +1,117 @@
+#team{
+    font-family: 'Serif','Times New Roman';
+	background: linear-gradient(-45deg, #EE7752, wheat, #23A6D5, #23D5AB ,#8085e8);
+    -webkit-animation: Gradient 15s ease infinite;
+	-moz-animation: Gradient 15s ease infinite;
+	animation: Gradient 15s ease infinite;
+    background-size: 500% 100%;
+}
+#cog{
+    width: 2%;
+    position: fixed;
+}
+@-webkit-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+.cloud{    width: 20%;position: relative}
+.chat{    width: 5%;position: relative; display: none;}
+#chat-people{    width: 25%;    position: relative;    left:-600px;    top: 400px; display: none;}
+#cloud1{left: -500px;top:100px;}#cloud2{left: -1000px;top:50px}#cloud3{left:-1500px;top:00px;}
+#cloud4{left: 1500px;top:50px;}#cloud5{left: 1500px;}#cloud6{left:1000px;top:150px;}
+#cloud4{left: 1500px;top:-300px;}#cloud5{left: 1500px;top:00px;}#cloud6{left:1000px;top:-50px;}
+#getStarted{
+    background-image: url('');/*https://joetowey.files.wordpress.com/2015/10/plexus-balloons1.gif*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    opacity: 1;
+    height: 100%;
+    width: 100%;
+}
+.list-unstyled {
+	padding-left: 0;
+	list-style: none;
+}
+.list-inline li {
+	display: inline-block;
+	padding-right: 10px;
+	padding-left: 10px;
+	margin-bottom: 10px;
+}
+.social-icons .fa {
+	font-size: 1.8em;
+}
+/*Change icons circle size and color here*/
+.social-icons .fa {
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	color: #FFF;
+	color: rgba(255, 255, 255, 0.8);
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.social-icons.icon-circle .fa{
+	border-radius: 50%;
+}
+.social-icons.icon-rounded .fa{
+	border-radius:50%;
+}
+.social-icons.icon-flat .fa{
+	border-radius: 0;
+}
+.carousel-item img{
+    width:100%;
+    height:100%;
+}
+
+.social-icons .fa-facebook:hover{background-color:#3C599F;}
+.social-icons .fa-github:hover{background-color:#070709;}
+.social-icons .fa-google:hover{background-color:#CF3D2E;}
+.social-icons .fa-instagram:hover{background:-webkit-linear-gradient(red,pink,yellow);}
+.social-icons .fa-linkedin:hover{background-color:#0085AE;}
+.card-action .fa {color:gray;opacity: 0.5;padding-left: 5px;}
+.card-action .fa-facebook:hover{color:#3C599F;opacity: 1}
+.card-action .fa-github:hover{color:#070709;opacity: 1}
+.card-action .fa-linkedin:hover{color:#0085AE;opacity: 1}
+.card{    border:15px transparent solid;    height:500px;}
+.card:hover{  border:0 transparent solid;  transition:border 0.5s linear;}
+.carousel .carousel-item {  width:500px !important;height:500px !important}
+.carousel  {height:550px !important;border: transparent solid 20px}
+.indicator-item .active{background-color: #2b669a}
+.nav-extended:hover{  background-color: firebrick;    transition:background-color 0.5s ease;}
+
+.button {
+    background-color: lightblue; /* Green */
+    border: transparent solid;
+    border-radius: 10px;
+    color: black;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    position: relative;
+    top:-450px;
+    left:850px;
+}
+.button2:hover {
+    background-color: #008CBA;
+    color: white;
+}

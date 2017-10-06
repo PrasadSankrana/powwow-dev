@@ -1,27 +1,365 @@
-<!DOCTYPE html>
-<html lang="en" ng-app="app" class="no-js">
+<html>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Spring boot and Angularjs Tutorial</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/css/app.css">
+    <link rel="icon" href="onlinelogomaker-080717-0938-2656.png">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/landingPage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.0.10/font-awesome-animation.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+    <script src="javascript/landingPage.js"></script>
 </head>
 <body>
-<h2>Administrator Panel</h2>
-<div class="home-section">
-    <ul class="menu-list">
-        <li><a href="#/users">Users</a></li>
-        <li><a href="#/roles">Roles</a></li>
-    </ul>
+<div class="navbar-fixed z-depth-5">
+    <nav class="nav-extended">
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo">Logo</a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="#getStartedDiv">Get-Started</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#contactUs">Contact-Us</a></li>
+
+            </ul>
+            <ul class="side-nav" id="mobile-demo">
+                <li><a href="#getStartedDiv">Get-Started</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#contactUs">Contact-Us</a></li>
+            </ul>
+        </div>
+    </nav>
 </div>
-<div ng-view></div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-resource.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-route.js"></script>
-<script src="/js/app.js"></script>
-<script src="/js/controller.js"></script>
-<link rel="stylesheet" href="bootstrap.css">
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/42/Cogwheel.png" id="cog">
+<div id="getStartedDiv" class="center">
+    <h1>PowWow</h1>
+    <button class="button button2">Get Started</button>
+    <img src="images/cloud.png" class="cloud" id="cloud1">
+    <img src="images/cloud.png" class="cloud" id="cloud2">
+    <img src="images/cloud.png" class="cloud" id="cloud3">
+    <img src="images/chat.png" class="chat" id="chat1">
+    <img src="images/chattingPeople.png" id="chat-people">
+    <img src="images/chat.png" class="chat" id="chat2">
+    <img src="images/chat.png" class="chat" id="chat3">
+    <img src="images/cloud.png" class="cloud" id="cloud4">
+    <img src="images/cloud.png" class="cloud" id="cloud5">
+    <img src="images/cloud.png" class="cloud" id="cloud6">
+</div>
+<div id="about" class="purple darken-2">
+
+</div>
+<div id="team" class="">
+    <div class="row" style=""><h4 class="col s6 center"><b>Team</b></h4><h4 class="col s6 center"><b>Tools</b></h4>
+    </div>
+    <div class="row">
+        <div class="carousel col s6">
+            <div class="carousel-item" href="#one!">
+
+                <div class="card large sticky-action grey lighten-5">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator"
+                             src="https://adityadasamantarao.files.wordpress.com/2016/07/cropped-adi_wp.jpg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">AdityaDasamantharao<i
+                                class="material-icons right">more_vert</i></span>
+                        <p><a href="#">Full Stack Developer</a></p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Card Title<i
+                                class="material-icons right">close</i></span>
+                        <i class="fa fa-1x fa-gamepad white "></i><b>Interests</b>
+                        <p>What u are passionated about and other stuff foes here</p>
+                        <i class="fa fa-spin fa-1x fa-cog white "></i><b> Works</b>
+                        <p>What u are passionated about and other stuff foes here</p>
+                        <i class="fa fa-1x fa-address-card white "></i><b> Contact</b>
+                        <p>CONTACT INFO</p>
+                    </div>
+                    <div class="card-action center">
+                        <a href="#"><i class="fa fa-2x fa-github"></i></a>
+                        <a href="#"><i class="fa fa-2x fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-2x fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item" href="#one!">
+
+                <div class="card large sticky-action grey lighten-5">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator"
+                             src="https://adityadasamantarao.files.wordpress.com/2016/07/cropped-adi_wp.jpg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">AdityaDasamantharao<i
+                                class="material-icons right">more_vert</i></span>
+                        <p><a href="#">Full Stack Developer</a></p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Card Title<i
+                                class="material-icons right">close</i></span>
+                        <i class="fa fa-1x fa-gamepad white "></i><b>Interests</b>
+                        <p>What u are passionated about and other stuff foes here</p>
+                        <i class="fa fa-spin fa-1x fa-cog white "></i><b> Works</b>
+                        <p>What u are passionated about and other stuff foes here</p>
+                        <i class="fa fa-1x fa-address-card white "></i><b> Contact</b>
+                        <p>CONTACT INFO</p>
+                    </div>
+                    <div class="card-action center">
+                        <a href="#"><i class="fa fa-2x fa-github"></i></a>
+                        <a href="#"><i class="fa fa-2x fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-2x fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item" href="#one!">
+
+                <div class="card large sticky-action grey lighten-5">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator"
+                             src="https://adityadasamantarao.files.wordpress.com/2016/07/cropped-adi_wp.jpg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">AdityaDasamantharao<i
+                                class="material-icons right">more_vert</i></span>
+                        <p><a href="#">Full Stack Developer</a></p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Card Title<i
+                                class="material-icons right">close</i></span>
+                        <i class="fa fa-1x fa-gamepad white "></i><b>Interests</b>
+                        <p>What u are passionated about and other stuff foes here</p>
+                        <i class="fa fa-spin fa-1x fa-cog white "></i><b> Works</b>
+                        <p>What u are passionated about and other stuff foes here</p>
+                        <i class="fa fa-1x fa-address-card white "></i><b> Contact</b>
+                        <p>CONTACT INFO</p>
+                    </div>
+                    <div class="card-action center">
+                        <a href="#"><i class="fa fa-2x fa-github"></i></a>
+                        <a href="#"><i class="fa fa-2x fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-2x fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item" href="#one!">
+
+                <div class="card large sticky-action grey lighten-5">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator"
+                             src="https://adityadasamantarao.files.wordpress.com/2016/07/cropped-adi_wp.jpg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">AdityaDasamantharao<i
+                                class="material-icons right">more_vert</i></span>
+                        <p><a href="#">Full Stack Developer</a></p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Card Title<i
+                                class="material-icons right">close</i></span>
+                        <i class="fa fa-1x fa-gamepad white "></i><b>Interests</b>
+                        <p>What u are passionated about and other stuff foes here</p>
+                        <i class="fa fa-spin fa-1x fa-cog white "></i><b> Works</b>
+                        <p>What u are passionated about and other stuff foes here</p>
+                        <i class="fa fa-1x fa-address-card white "></i><b> Contact</b>
+                        <p>CONTACT INFO</p>
+                    </div>
+                    <div class="card-action center">
+                        <a href="#"><i class="fa fa-2x fa-github"></i></a>
+                        <a href="#"><i class="fa fa-2x fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-2x fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item" href="#one!">
+
+                <div class="card large sticky-action grey lighten-5">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator"
+                             src="https://adityadasamantarao.files.wordpress.com/2016/07/cropped-adi_wp.jpg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">AdityaDasamantharao<i
+                                class="material-icons right">more_vert</i></span>
+                        <p><a href="#">Full Stack Developer</a></p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Card Title<i
+                                class="material-icons right">close</i></span>
+                        <i class="fa fa-1x fa-gamepad white "></i><b>Interests</b>
+                        <p>What u are passionated about and other stuff foes here</p>
+                        <i class="fa fa-spin fa-1x fa-cog white "></i><b> Works</b>
+                        <p>What u are passionated about and other stuff foes here</p>
+                        <i class="fa fa-1x fa-address-card white "></i><b> Contact</b>
+                        <p>CONTACT INFO</p>
+                    </div>
+                    <div class="card-action center">
+                        <a href="#"><i class="fa fa-2x fa-github"></i></a>
+                        <a href="#"><i class="fa fa-2x fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-2x fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel col s6">
+            <div class="carousel-item" href="#two!">
+                <div class="card medium sticky-action grey lighten-5">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator"
+                             src="http://www.phpteacheronline.com/wp-content/uploads/2015/08/html-css-javascript-and-jquery.png">
+                    </div>
+                    <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4">Front-End-Technologies<i
+                class="material-icons right">more_vert</i></span>
+                        <p><a href="#">HTML, CSS, JS and ...</a></p>
+                    </div>
+                    <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">Card Title<i
+                class="material-icons right">close</i></span>
+                        <i class="fa fa-1x fa-gamepad white "></i><b>HTML</b>
+                        <p>HTML5 Features</p>
+                        <i class="fa fa-spin fa-1x fa-cog white "></i><b>CSS</b>
+                        <p>CSS, SCSS, FontAwesome, MaterializeCss.css</p>
+                        <i class="fa fa-1x fa-address-card white "></i><b>Animations</b>
+                        <p>FontAwesomeAnimate</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item" href="#two!">
+                <div class="card medium sticky-action grey lighten-5">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator"
+                             src="https://t3.ftcdn.net/jpg/00/82/48/96/240_F_82489682_cVcu1J0gcgvPIsy5JPPhQJlWn6w1aWN3.jpg">
+                    </div>
+                    <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4">Back-End-Technologies<i
+                class="material-icons right">more_vert</i></span>
+                        <p><a href="#">HTML, CSS, JS and ...</a></p>
+                    </div>
+                    <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">Card Title<i
+                class="material-icons right">close</i></span>
+                        <i class="fa fa-1x fa-gamepad white "></i><b>HTML</b>
+                        <p>HTML5 Features</p>
+                        <i class="fa fa-spin fa-1x fa-cog white "></i><b>CSS</b>
+                        <p>CSS, SCSS, FontAwesome, MaterializeCss.css</p>
+                        <i class="fa fa-1x fa-address-card white "></i><b>Animations</b>
+                        <p>FontAwesomeAnimate</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item" href="#two!">
+                <div class="card medium sticky-action grey lighten-5">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator"
+                             src="http://blog.datumbox.com/wp-content/uploads/2016/01/machine-learning-new-release.jpg">
+                    </div>
+                    <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4">FrameWorks<i
+                class="material-icons right">more_vert</i></span>
+                        <p><a href="#">HTML, CSS, JS and ...</a></p>
+                    </div>
+                    <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">Card Title<i
+                class="material-icons right">close</i></span>
+                        <i class="fa fa-1x fa-gamepad white "></i><b>HTML</b>
+                        <p>HTML5 Features</p>
+                        <i class="fa fa-spin fa-1x fa-cog white "></i><b>CSS</b>
+                        <p>CSS, SCSS, FontAwesome, MaterializeCss.css</p>
+                        <i class="fa fa-1x fa-address-card white "></i><b>Animations</b>
+                        <p>FontAwesomeAnimate</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item" href="#two!">
+                <div class="card medium sticky-action grey lighten-5">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator"
+                             src="http://www.quitesoft.com/wp-content/uploads/2017/05/web-hosting.png">
+                    </div>
+                    <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4">Hosting-Technologies<i
+                class="material-icons right">more_vert</i></span>
+                        <p><a href="#">HTML, CSS, JS and ...</a></p>
+                    </div>
+                    <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">Card Title<i
+                class="material-icons right">close</i></span>
+                        <i class="fa fa-1x fa-gamepad white "></i><b>HTML</b>
+                        <p>HTML5 Features</p>
+                        <i class="fa fa-spin fa-1x fa-cog white "></i><b>CSS</b>
+                        <p>CSS, SCSS, FontAwesome, MaterializeCss.css</p>
+                        <i class="fa fa-1x fa-address-card white "></i><b>Animations</b>
+                        <p>FontAwesomeAnimate</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="contactUs" class="">
+    <div class="row">
+        <div id="map" class="col s6 left">
+
+        </div>
+        <form class="col s6 right">
+            <div class="row">
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">account_circle</i>
+                    <input id="username" type="text" class="validate">
+                    <label for="username">Name</label>
+                </div>
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">email</i>
+                    <input id="mail" type="email" class="validate">
+                    <label for="mail">Mail-Id</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">sms</i>
+                    <textarea id="message" class="materialize-textarea validate"></textarea>
+                    <label for="message">Message</label>
+                </div>
+            </div>
+            <div class="row right">
+                <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                    <i class="material-icons right">send</i>
+                </button>
+            </div>
+        </form>
+    </div>
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">What do we do?</h5>
+                    <p class="grey-text text-lighten-4"></p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Join Us Through ...</h5>
+                    <ul class="social-icons icon-rounded  list-unstyled list-inline">
+                        <li><a href="#"><i class="fa fa-3x fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-3x fa-github"></i></a></li>
+                        <li><a href="#"><i class="fa fa-3x fa-google"></i></a></li>
+                        <li><a href="#"><i class="fa fa-3x fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa fa-3x fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2014 Copyright Text
+                <a class="grey-text text-lighten-4 right" href="#">More Links</a>
+            </div>
+        </div>
+    </footer>
+</div>
+
 </body>
 </html>
