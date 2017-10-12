@@ -12,7 +12,6 @@ app.controller('postcontroller', function($scope, $http, $location) {
                 	'Content-Type': 'application/json'
                 }
         }
-		$http.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
 		var data = {
 				emailId: $scope.email_id,
 				password: $scope.password,

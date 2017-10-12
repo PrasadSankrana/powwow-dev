@@ -14,7 +14,7 @@ public class User implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private int id;
+	private long id;
 
 	private byte active;
 
@@ -35,7 +35,7 @@ public class User implements Serializable {
 		this.email_id = email_id;
 	}
 
-	public int getId() {
+	public long getId() {
 		return this.id;
 	}
 
