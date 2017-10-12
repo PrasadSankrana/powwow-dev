@@ -28,6 +28,12 @@ public class User implements Serializable {
 
 	public User() {
 	}
+	
+	public User(String email_id,String password,String username) {
+		this.username = username;
+		this.password = password;
+		this.email_id = email_id;
+	}
 
 	public int getId() {
 		return this.id;
